@@ -6,19 +6,46 @@
   <title>Kyle Sugg · Program Manager</title>
   <meta name="description" content="U.S. Marine Corps PM transitioning to private sector Spring 2026—known for compressing timelines, reducing risk, and communicating with clarity using Lean + GenAI workflows." />
   <style>
-    :root { --bg:#0a0a0a; --card:#141414; --muted:#9ca3af; --text:#f3f4f6; --accent:#ffffff; --border:#262626;}
+    /* --------- Light Theme (Option B) --------- */
+    :root{
+      --bg:#f7f8fb;        /* warm paper */
+      --card:#ffffff;      /* white cards */
+      --border:#e6e8ef;    /* soft cool-gray border */
+      --text:#0f172a;      /* slate-900 */
+      --muted:#64748b;     /* slate-500 */
+      --accent:#2563eb;    /* calm blue for primary button */
+    }
+
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial}
     a{color:var(--text);text-decoration:none}
     a:hover{opacity:.85}
     .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    .nav{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border);background:rgba(10,10,10,.7)}
+
+    /* Light sticky nav */
+    .nav{
+      position:sticky;top:0;
+      backdrop-filter:saturate(140%) blur(8px);
+      border-bottom:1px solid var(--border);
+      background:rgba(255,255,255,0.7);
+    }
     .navrow{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:12px 0}
+
     .btn{display:inline-block;padding:10px 14px;border-radius:14px;border:1px solid var(--border)}
-    .btn.primary{background:var(--accent);color:#111;font-weight:600}
+    .btn.primary{background:var(--accent);color:#ffffff;font-weight:600}
+
     .grid{display:grid;gap:16px}
     @media(min-width:900px){.grid.cols-2{grid-template-columns:1fr 1fr}}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+      /* Light mode "float" */
+      box-shadow:0 8px 22px rgba(2,6,23,0.08);
+    }
+
     .tag{font-size:12px;text-transform:uppercase;color:var(--muted)}
     h1{font-size:34px;line-height:1.2;margin:0}
     h2{font-size:24px;margin:0}
@@ -29,16 +56,20 @@
     ul{margin:8px 0 0 18px}
     li{margin:4px 0}
     footer{color:var(--muted);font-size:12px;padding:36px 0;text-align:center}
+
     .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
     @media(max-width:700px){.kpis{grid-template-columns:repeat(2,1fr)}}
-    .kpi{background:#0f0f0f;border:1px solid var(--border);border-radius:14px;padding:12px}
+    .kpi{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:12px;
+      box-shadow:0 6px 18px rgba(2,6,23,0.06);
+    }
     .kpi dt{color:var(--muted);font-size:12px}
     .kpi dd{margin:6px 0 0;font-weight:700;font-size:22px}
+
     .section{padding:28px 0}
-    /* Core skills pill buttons */
-    .pill{border:1px solid var(--border);background:#0f0f0f;border-radius:16px;padding:8px 12px;text-align:left}
-    .pill:focus{outline:2px solid #525252;outline-offset:2px}
-    .pill:hover{border-color:#525252;transition:all .15s ease}
   </style>
 </head>
 <body>
@@ -46,7 +77,11 @@
     <div class="wrap navrow">
       <strong>Kyle Sugg · Senior Program Manager</strong>
       <div style="display:flex;gap:14px;font-size:14px">
-        <a href="#work">Project Portfolio</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <!-- Order matches page sections: About → Project Portfolio → Skills → Contact -->
+        <a href="#about">About</a>
+        <a href="#work">Project Portfolio</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </div>
@@ -58,6 +93,18 @@
       <div class="sp8"></div>
       <p class="muted"><strong>Less chaos, more cadence.</strong></p>
       <p class="muted">Lean, Agile, and GenAI playbooks that turn work into wins.</p>
+
+      <!-- ABOUT moved up under the tagline/subhead -->
+      <div class="sp16"></div>
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">About</h2>
+        <p class="muted">
+          U.S. Marine Corps ops and PM leader translating mission discipline to business outcomes.
+          I build systems that scale, coach teams, and obsess over measurable results.
+          Edge: compress timelines, reduce risk, communicate with clarity under pressure.
+        </p>
+      </section>
+
       <div class="sp16"></div>
       <div class="kpis">
         <div class="kpi"><dt>Program Headcount Scope</dt><dd>200+</dd></div>
@@ -66,8 +113,7 @@
         <div class="kpi"><dt>COPQ Savings</dt><dd>$10K+/yr</dd></div>
       </div>
       <div class="sp16"></div>
-      <a class="btn primary" href="#work">See Case Studies</a>
-      <span> </span>
+      <!-- Case Studies button removed -->
       <a class="btn" href="resume.pdf">Download Résumé</a>
       <div class="sp8"></div>
     </section>
@@ -154,37 +200,6 @@
           </ul>
         </div>
       </div>
-
-      <!-- Core Skills Boxes -->
-      <div class="sp16"></div>
-      <h3 class="muted" style="margin:0 0 8px 0;">Core Skills</h3>
-      <div class="grid" style="grid-template-columns:repeat(2,1fr);gap:12px"
-           aria-labelledby="core-skills">
-        <button type="button" class="pill" aria-label="Skill: Program Management">Program Management</button>
-        <button type="button" class="pill" aria-label="Skill: Resource Constraints">Resource Constraints</button>
-        <button type="button" class="pill" aria-label="Skill: Risk Management">Risk Management</button>
-        <button type="button" class="pill" aria-label="Skill: Leadership">Leadership</button>
-        <button type="button" class="pill" aria-label="Skill: Milestones">Milestones</button>
-        <button type="button" class="pill" aria-label="Skill: Continuous Improvement">Continuous Improvement</button>
-        <button type="button" class="pill" aria-label="Skill: Stakeholder Management">Stakeholder Management</button>
-        <button type="button" class="pill" aria-label="Skill: Change Management">Change Management</button>
-        <button type="button" class="pill" aria-label="Skill: Solution Implementation">Solution Implementation</button>
-        <button type="button" class="pill" aria-label="Skill: Operational Strategy">Operational Strategy</button>
-        <button type="button" class="pill" aria-label="Skill: Compliance">Compliance</button>
-        <button type="button" class="pill" aria-label="Skill: Communication">Communication</button>
-        <button type="button" class="pill" aria-label="Skill: Information Security">Information Security</button>
-        <button type="button" class="pill" aria-label="Skill: Communication Tools">Communication Tools</button>
-        <button type="button" class="pill" aria-label="Skill: Team Support">Team Support</button>
-        <button type="button" class="pill" aria-label="Skill: Assessment">Assessment</button>
-        <button type="button" class="pill" aria-label="Skill: Timelines">Timelines</button>
-        <button type="button" class="pill" aria-label="Skill: Microsoft 365">Microsoft 365</button>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <h2>About</h2>
-      <p class="muted">U.S. Marine Corps ops and PM leader translating mission discipline to business outcomes. I build systems that scale, coach teams, and obsess over measurable results. Edge: compress timelines, reduce risk, communicate with clarity under pressure.</p>
     </section>
 
     <!-- CONTACT -->
@@ -203,5 +218,3 @@
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-
-
